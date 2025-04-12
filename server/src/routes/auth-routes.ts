@@ -10,6 +10,9 @@ export const login = async (req: Request, res: Response) => {
       username: username,
     },
   });
+  
+  console.log(singleUser)
+
   if (!singleUser) {
     res.sendStatus(400);
     return;
@@ -24,7 +27,8 @@ const secretKey = process.env.JWT_SECRET_KEY || '';
 const token = jwt.sign({username, id:singleUser.id}, secretKey,{
   expiresIn:"2h"
 });
-res.json({token:token});
+console.log({token:token})
+return res.json({token:token});
 };
 
 const router = Router();
