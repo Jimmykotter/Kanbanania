@@ -4,7 +4,7 @@ Kanbanania is a full-stack Kanban board application designed to demonstrate my s
 
 ## Screenshots
 
-![Kanbanania Screenshot](/public/screenshot.png)
+![screenshot](https://github.com/user-attachments/assets/ff4e2ca7-0113-4c7d-ba72-a843da1fa886)
 
 ## Built With
 
