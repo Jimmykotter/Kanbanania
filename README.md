@@ -50,13 +50,6 @@ npm install
 cd ../server
 npm install
 
-4. PORT=3001
-DATABASE_URL=your_postgres_connection_string
-JWT_SECRET=your_secret_key
-
-5. npx sequelize db:create
-npx sequelize db:migrate
-npx sequelize db:seed:all
 ## Contributing
 
 This is a personal project and not currently accepting external contributions. However, feel free to fork it and customize it for your own portfolio!
