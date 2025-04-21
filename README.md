@@ -1,44 +1,50 @@
-# Kanbanania
+# BookScope
 
-Kanbanania is a full-stack Kanban board application designed to demonstrate my skills in full-stack development, including authentication, API handling, state management, and responsive UI. The app provides a fast, clean, and functional interface for managing tasks visually using a column-based workflow.
-
-## Screenshots
-
-![screenshot](https://github.com/user-attachments/assets/ff4e2ca7-0113-4c7d-ba72-a843da1fa886)
-
-## Built With
-
-- [React](https://reactjs.org/) – Frontend UI library
-- [Vite](https://vitejs.dev/) – Build tool for lightning-fast development
-- [TypeScript](https://www.typescriptlang.org/) – Static typing for better code quality
-- [React Router](https://reactrouter.com/) – Navigation and routing
-- [Tailwind CSS](https://tailwindcss.com/) – Utility-first CSS framework
-- [Framer Motion](https://www.framer.com/motion/) – Animations and transitions (if used)
-- [Node.js](https://nodejs.org/) – Backend runtime environment
-- [Express](https://expressjs.com/) – Backend web framework
-- [PostgreSQL](https://www.postgresql.org/) – SQL database
-- [Sequelize](https://sequelize.org/) – ORM for database management
-- [JWT](https://jwt.io/) – Secure token-based authentication
-- [bcrypt](https://github.com/kelektiv/node.bcrypt.js) – Password hashing
+**BookScope** is a full-stack MERN application that allows users to search for books using the Google Books API and save their favorite reads to a personal collection. Originally built with RESTful APIs, this version has been refactored to use **GraphQL with Apollo Server**, providing a more flexible and performant way to manage and query data.
 
 ## Features
 
-- User registration and login
-- JWT-based authentication
-- Create, edit, and delete tasks
-- Drag-and-drop tasks between columns (To Do, In Progress, Done)
-- Responsive layout for all devices
-- Protected routes based on login state
+- Search books by title or keyword using the Google Books API
+- View results with title, author, description, cover image, and link
+- Create a user account and log in with JWT-based authentication
+- Save and remove books from a personalized reading list
+- View saved books on a separate dashboard
+- Fully responsive and clean user interface
+
+## Built With
+
+**Frontend**
+- [React](https://reactjs.org/) – Frontend UI library
+- [Apollo Client](https://www.apollographql.com/docs/react/) – GraphQL client for managing API requests
+- [React Router](https://reactrouter.com/) – Client-side routing
+- [Tailwind CSS](https://tailwindcss.com/) – Utility-first CSS framework
+
+**Backend**
+- [Node.js](https://nodejs.org/) – Runtime environment
+- [Express](https://expressjs.com/) – Server framework
+- [Apollo Server](https://www.apollographql.com/docs/apollo-server/) – GraphQL API server
+- [MongoDB](https://www.mongodb.com/) – NoSQL database
+- [Mongoose](https://mongoosejs.com/) – ODM for MongoDB
+- [JWT](https://jwt.io/) – Authentication with JSON Web Tokens
+- [bcrypt](https://github.com/kelektiv/node.bcrypt.js) – Password hashing
+
+## GraphQL API
+
+**Queries**
+- `me` – Returns the current user's profile and saved books
+
+**Mutations**
+- `login(email, password)` – Logs in user and returns token
+- `addUser(username, email, password)` – Creates a new user and returns token
+- `saveBook(bookInput)` – Saves a book to the user's profile
+- `removeBook(bookId)` – Removes a saved book by ID
 
 ## Getting Started
 
-To run this project locally:
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/kanbanania.git
-   cd kanbanania
-
+### 1. Clone the repository
+```bash
+git clone https://github.com/your-username/bookscope.git
+cd bookscope
 
 2. Install dependencies:
 # Frontend
@@ -66,6 +72,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 **Link to Deployed Website**
 
-https://kanbanania.onrender.com
+https://bookscope.onrender.com
 
-https://github.com/Jimmykotter/Kanbanania
+https://github.com/Jimmykotter/BookScope
